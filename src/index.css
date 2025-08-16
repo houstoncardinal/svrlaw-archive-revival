@@ -8,49 +8,62 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
+    /* Pure luxury black & gold palette */
     --background: 0 0% 100%;
-    --foreground: 214 18% 15%;
+    --foreground: 0 0% 8%;
 
     --card: 0 0% 100%;
-    --card-foreground: 214 18% 15%;
+    --card-foreground: 0 0% 8%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 214 18% 15%;
+    --popover-foreground: 0 0% 8%;
 
-    --primary: 214 50% 12%;
-    --primary-foreground: 45 80% 90%;
+    --primary: 0 0% 8%;
+    --primary-foreground: 45 100% 85%;
 
-    --secondary: 214 15% 95%;
-    --secondary-foreground: 214 50% 12%;
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 8%;
 
-    --muted: 214 15% 96%;
-    --muted-foreground: 214 12% 45%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
 
-    --accent: 45 85% 58%;
-    --accent-foreground: 214 50% 12%;
+    --accent: 45 100% 60%;
+    --accent-foreground: 0 0% 8%;
 
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 214 20% 90%;
-    --input: 214 20% 90%;
-    --ring: 214 50% 12%;
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 45 100% 60%;
 
-    /* Law firm specific tokens */
-    --law-navy: 214 50% 12%;
-    --law-navy-light: 214 35% 20%;
-    --law-gold: 45 85% 58%;
-    --law-gold-light: 45 80% 75%;
-    --law-cream: 45 50% 96%;
-    --law-text-light: 214 15% 55%;
+    /* Fortune 500 law firm luxury tokens */
+    --luxury-black: 0 0% 4%;
+    --luxury-black-soft: 0 0% 8%;
+    --luxury-black-medium: 0 0% 12%;
+    --luxury-gold: 45 100% 60%;
+    --luxury-gold-light: 45 100% 75%;
+    --luxury-gold-rich: 42 88% 52%;
+    --luxury-platinum: 210 10% 95%;
+    --luxury-silver: 210 8% 85%;
+    --luxury-charcoal: 210 10% 20%;
+    --luxury-cream: 45 80% 98%;
     
-    /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(var(--law-navy)), hsl(var(--law-navy-light)));
-    --gradient-gold: linear-gradient(135deg, hsl(var(--law-gold)), hsl(var(--law-gold-light)));
+    /* Premium gradients */
+    --gradient-luxury: linear-gradient(135deg, hsl(var(--luxury-black)), hsl(var(--luxury-black-soft)));
+    --gradient-gold: linear-gradient(135deg, hsl(var(--luxury-gold)), hsl(var(--luxury-gold-rich)));
+    --gradient-platinum: linear-gradient(180deg, hsl(var(--luxury-platinum)), hsl(var(--luxury-silver)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--luxury-black)) 0%, hsl(var(--luxury-black-soft)) 50%, hsl(var(--luxury-charcoal)) 100%);
     
-    /* Shadows */
-    --shadow-elegant: 0 20px 40px -10px hsl(var(--law-navy) / 0.1);
-    --shadow-gold: 0 10px 30px -10px hsl(var(--law-gold) / 0.2);
+    /* Premium shadows */
+    --shadow-luxury: 0 25px 50px -12px hsl(var(--luxury-black) / 0.25);
+    --shadow-gold: 0 20px 40px -10px hsl(var(--luxury-gold) / 0.3);
+    --shadow-premium: 0 32px 64px -12px hsl(var(--luxury-black) / 0.4);
+    --shadow-subtle: 0 8px 32px -8px hsl(var(--luxury-black) / 0.1);
+    
+    /* Typography */
+    --font-display: 'Playfair Display', serif;
+    --font-body: 'Inter', sans-serif;
 
     --radius: 0.5rem;
 
@@ -130,6 +143,11 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-body antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    @apply font-medium tracking-tight;
   }
 }

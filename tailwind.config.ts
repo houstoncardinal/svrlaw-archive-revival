@@ -52,12 +52,16 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				'law-navy': 'hsl(var(--law-navy))',
-				'law-navy-light': 'hsl(var(--law-navy-light))',
-				'law-gold': 'hsl(var(--law-gold))',
-				'law-gold-light': 'hsl(var(--law-gold-light))',
-				'law-cream': 'hsl(var(--law-cream))',
-				'law-text-light': 'hsl(var(--law-text-light))',
+				'luxury-black': 'hsl(var(--luxury-black))',
+				'luxury-black-soft': 'hsl(var(--luxury-black-soft))',
+				'luxury-black-medium': 'hsl(var(--luxury-black-medium))',
+				'luxury-gold': 'hsl(var(--luxury-gold))',
+				'luxury-gold-light': 'hsl(var(--luxury-gold-light))',
+				'luxury-gold-rich': 'hsl(var(--luxury-gold-rich))',
+				'luxury-platinum': 'hsl(var(--luxury-platinum))',
+				'luxury-silver': 'hsl(var(--luxury-silver))',
+				'luxury-charcoal': 'hsl(var(--luxury-charcoal))',
+				'luxury-cream': 'hsl(var(--luxury-cream))',
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
@@ -74,13 +78,21 @@ export default {
 				md: 'calc(var(--radius) - 2px)',
 				sm: 'calc(var(--radius) - 4px)'
 			},
+			fontFamily: {
+				'display': ['var(--font-display)'],
+				'body': ['var(--font-body)'],
+			},
 			backgroundImage: {
-				'gradient-hero': 'var(--gradient-hero)',
-				'gradient-gold': 'var(--gradient-gold)'
+				'gradient-luxury': 'var(--gradient-luxury)',
+				'gradient-gold': 'var(--gradient-gold)',
+				'gradient-platinum': 'var(--gradient-platinum)',
+				'gradient-hero': 'var(--gradient-hero)'
 			},
 			boxShadow: {
-				'elegant': 'var(--shadow-elegant)',
-				'gold': 'var(--shadow-gold)'
+				'luxury': 'var(--shadow-luxury)',
+				'gold': 'var(--shadow-gold)',
+				'premium': 'var(--shadow-premium)',
+				'subtle': 'var(--shadow-subtle)'
 			},
 			keyframes: {
 				'accordion-down': {
@@ -108,12 +120,43 @@ export default {
 						opacity: '1',
 						transform: 'translateY(0)'
 					}
+				},
+				'slide-up': {
+					from: {
+						opacity: '0',
+						transform: 'translateY(30px)'
+					},
+					to: {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
+				},
+				'scale-in': {
+					from: {
+						opacity: '0',
+						transform: 'scale(0.95)'
+					},
+					to: {
+						opacity: '1',
+						transform: 'scale(1)'
+					}
+				},
+				'shine': {
+					from: {
+						transform: 'translateX(-100%)'
+					},
+					to: {
+						transform: 'translateX(100%)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
-				'fade-in': 'fade-in 0.6s ease-out'
+				'fade-in': 'fade-in 0.6s ease-out',
+				'slide-up': 'slide-up 0.8s ease-out',
+				'scale-in': 'scale-in 0.4s ease-out',
+				'shine': 'shine 2s ease-in-out infinite'
 			}
 		}
 	},
